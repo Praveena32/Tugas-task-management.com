@@ -127,7 +127,8 @@ export const IllustrationPanel: React.FC = () => {
             backgroundColor: '#FFFFFF',
             borderRadius: '16px',
             p: 1.5,
-            width: 140,
+            width: 180,
+
             boxShadow: '0 12px 28px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04)',
             border: '1px solid #595f6aff',
             animation: 'floatCard 5s ease-in-out infinite',
@@ -135,82 +136,103 @@ export const IllustrationPanel: React.FC = () => {
               '0%, 100%': { transform: 'translateY(0px)' },
               '50%': { transform: 'translateY(-5px)' },
             },
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 1.25,
           }}
         >
-          {/* Header Row: Title & Circular Progress */}
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 0.75 }}>
-            <Box>
-              <Typography
-                sx={{
-                  fontWeight: 200,
-                  fontSize: '0.8rem',
-                  color: '#111827',
-                  lineHeight: 1.2,
-                }}
-              >
-                Canva Design
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: '0.675rem',
-                  color: '#9CA3AF',
-                  lineHeight: 1.3,
-                }}
-              >
-                10 Task
-              </Typography>
-            </Box>
-
-            {/* Circular Progress Gauge */}
-            <Box sx={{ position: 'relative', width: 34, height: 34 }}>
-              <svg width="34" height="34" viewBox="0 0 36 36">
-                <path
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                  fill="none"
-                  stroke="#000000ff"
-                  strokeWidth="3.5"
-                />
-                <path
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                  fill="none"
-                  stroke="#9FD094"
-                  strokeWidth="3.5"
-                  strokeDasharray="84, 100"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <Typography
-                sx={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  fontSize: '0.5625rem',
-                  fontWeight: 700,
-                  color: '#111827',
-                }}
-              >
-                84%
-              </Typography>
-            </Box>
+          {/* Left Column: Canva Design (Single Line), 10 Task, Design Tag */}
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.35, minWidth: 0 }}>
+            <Typography
+              sx={{
+                fontWeight: 600,
+                fontSize: '0.8rem',
+                color: '#111827',
+                lineHeight: 1.2,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Canva Design
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: '0.5rem',
+                color: '#9CA3AF',
+                lineHeight: 1.2,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              10 Task
+            </Typography>
+            <Chip
+              label="Design"
+              size="small"
+              variant="outlined"
+              sx={{
+                height: 19,
+                fontSize: '0.625rem',
+                fontWeight: 300,
+                borderColor: '#666667ff',
+                color: '#070707ff',
+                width: 'fit-content',
+                mt: 0.25,
+                '& .MuiChip-label': {
+                  px: 0.8,
+                },
+              }}
+            />
           </Box>
 
-          {/* Design Tag */}
-          <Chip
-            label="Design"
-            size="small"
-            variant="outlined"
+          {/* Right Column: Circular Progress Gauge Centered Vertically */}
+          <Box
             sx={{
-              height: 20,
-              fontSize: '0.625rem',
-              fontWeight: 300,
-              borderColor: '#666667ff',
-              color: '#070707ff',
-              '& .MuiChip-label': {
-                px: 1,
-              },
+              position: 'relative',
+              width: 38,
+              height: 38,
+              flexShrink: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
-          />
+          >
+            <svg width="38" height="38" viewBox="0 0 36 36">
+              <circle
+                cx="18"
+                cy="18"
+                r="15.9155"
+                fill="none"
+                stroke="#000000ff"
+                strokeWidth="3.2"
+              />
+              <circle
+                cx="18"
+                cy="18"
+                r="15.9155"
+                fill="none"
+                stroke="#9FD094"
+                strokeWidth="3.2"
+                strokeDasharray="84 100"
+                strokeDashoffset="0"
+                strokeLinecap="round"
+                transform="rotate(45 18 18)"
+              />
+            </svg>
+            <Typography
+              sx={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                fontSize: '0.5625rem',
+                fontWeight: 700,
+                color: '#111827',
+                lineHeight: 1,
+              }}
+            >
+              84%
+            </Typography>
+          </Box>
         </Box>
       </Box>
 
