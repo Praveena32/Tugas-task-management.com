@@ -15,7 +15,6 @@ import {
 import {
   VisibilityOutlined,
   VisibilityOffOutlined,
-  InfoOutlined,
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -23,7 +22,7 @@ import { GoogleIcon, AppleIcon, FacebookIcon } from './SocialIcons';
 
 export const LoginForm: React.FC = () => {
   const navigate = useNavigate();
-  const { signInWithGoogle, isConfigured } = useAuth();
+  const { signInWithGoogle } = useAuth();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -123,33 +122,8 @@ export const LoginForm: React.FC = () => {
         flexDirection: 'column',
         position: 'relative',
       }}
-    >
-      {/* Discreet Config Status indicator 
-      <Box sx={{ position: 'absolute', top: -30, right: 0 }}>
-        <Tooltip
-          title={
-            isConfigured
-              ? 'Firebase Auth connected via .env'
-              : 'Firebase running in local developer preview mode (simulated OAuth token). Add credentials to .env for live Firebase project.'
-          }
-          arrow
-        >
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 0.5,
-              cursor: 'pointer',
-              color: isConfigured ? '#10B981' : '#9CA3AF',
-              fontSize: '0.75rem',
-            }}
-          >
-            <InfoOutlined sx={{ fontSize: '0.9rem' }} />
-            <span>{isConfigured ? 'Firebase Active' : 'Preview Mode'}</span>
-          </Box>
-        </Tooltip>
-      </Box>*/}
 
+    >
       {/* Header */}
       <Box sx={{ mb: 2, textAlign: 'center' }}>
         <Typography

@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
   typography: {
-    fontFamily: '"Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    fontFamily: '"Poppins", sans-serif',
     h3: {
       fontWeight: 800,
       fontSize: '2rem',
