@@ -2,12 +2,13 @@ import { initializeApp, getApps, type FirebaseApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, type Auth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || '',
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || '',
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || '',
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '',
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || '',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || 'AIzaSyCids0RRxS6d5VOxysmx_GKeD__fLVKyP8',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'tugas-task-management.firebaseapp.com',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'tugas-task-management',
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'tugas-task-management.firebasestorage.app',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '773743536990',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '1:773743536990:web:2051cb8994cd092817fdcf',
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || 'G-96YZGYYXTJ',
 };
 
 export const isFirebaseConfigured = (): boolean => {
@@ -27,13 +28,11 @@ googleProvider.addScope('email');
 googleProvider.addScope('profile');
 googleProvider.setCustomParameters({ prompt: 'select_account' });
 
-if (isFirebaseConfigured()) {
-  try {
-    app = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
-    auth = getAuth(app);
-  } catch (error) {
-    console.warn('Firebase initialization warning:', error);
-  }
+try {
+  app = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
+  auth = getAuth(app);
+} catch (error) {
+  console.warn('Firebase initialization warning:', error);
 }
 
 export { app, auth, googleProvider };
