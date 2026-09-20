@@ -351,7 +351,7 @@ export const LoginForm: React.FC = () => {
         }}
       >
         {/* Google Button */}
-        <Tooltip title="Sign in with Google (Firebase Auth)" arrow>
+        <Tooltip title="Sign in with Google" arrow>
           <span>
             <IconButton
               onClick={handleGoogleSignIn}
@@ -361,20 +361,20 @@ export const LoginForm: React.FC = () => {
                 width: 48,
                 height: 48,
                 borderRadius: '50%',
-                border: '1.5px solid #E5E7EB',
-                backgroundColor: '#FFFFFF',
+                border: '1.5px solid #000000ff',
+                backgroundColor: '#000000ff',
                 boxShadow: '0 1px 3px rgba(0, 0, 0, 0.04)',
                 transition: 'all 0.2s ease',
                 '&:hover': {
-                  backgroundColor: '#F9FAFB',
-                  borderColor: '#D1D5DB',
+                  backgroundColor: '#222426ff',
+                  borderColor: '#222426ff',
                   transform: 'translateY(-2px)',
                   boxShadow: '0 4px 10px rgba(0, 0, 0, 0.08)',
                 },
               }}
             >
               {isGoogleLoading ? (
-                <CircularProgress size={20} sx={{ color: '#4285F4' }} />
+                <CircularProgress size={20} sx={{ color: '#ffffffff' }} />
               ) : (
                 <GoogleIcon size={20} />
               )}
@@ -391,13 +391,13 @@ export const LoginForm: React.FC = () => {
               width: 48,
               height: 48,
               borderRadius: '50%',
-              border: '1.5px solid #E5E7EB',
-              backgroundColor: '#FFFFFF',
+              border: '1.5px solid #000000ff',
+              backgroundColor: '#000000ff',
               boxShadow: '0 1px 3px rgba(0, 0, 0, 0.04)',
               transition: 'all 0.2s ease',
               '&:hover': {
-                backgroundColor: '#F9FAFB',
-                borderColor: '#D1D5DB',
+                backgroundColor: '#222426ff',
+                borderColor: '#222426ff',
                 transform: 'translateY(-2px)',
                 boxShadow: '0 4px 10px rgba(0, 0, 0, 0.08)',
               },
@@ -416,13 +416,13 @@ export const LoginForm: React.FC = () => {
               width: 48,
               height: 48,
               borderRadius: '50%',
-              border: '1.5px solid #E5E7EB',
-              backgroundColor: '#FFFFFF',
+              border: '1.5px solid #000000ff',
+              backgroundColor: '#000000ff',
               boxShadow: '0 1px 3px rgba(0, 0, 0, 0.04)',
               transition: 'all 0.2s ease',
               '&:hover': {
-                backgroundColor: '#F9FAFB',
-                borderColor: '#D1D5DB',
+                backgroundColor: '#222426ff',
+                borderColor: '#222426ff',
                 transform: 'translateY(-2px)',
                 boxShadow: '0 4px 10px rgba(0, 0, 0, 0.08)',
               },
@@ -447,7 +447,7 @@ export const LoginForm: React.FC = () => {
             component="span"
             onClick={() => setToastMessage('Registration feature coming soon!')}
             sx={{
-              color: '#111827',
+              color: '#9FD094',
               fontWeight: 600,
               cursor: 'pointer',
               textDecoration: 'none',
