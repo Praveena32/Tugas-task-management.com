@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Typography, Avatar, Chip } from '@mui/material';
 import meditationImg from '../../assets/meditation.png';
+import avatar1Img from '../../assets/avatar1.png';
+import avatar2Img from '../../assets/avatar2.png';
 
 export const IllustrationPanel: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(1);
@@ -11,10 +13,10 @@ export const IllustrationPanel: React.FC = () => {
         width: '100%',
         maxWidth: { xs: '100%', sm: 480, md: 540, lg: 600 },
         height: { xs: 'auto', md: 'calc(100vh - 36px)' },
-        minHeight: { xs: 460, sm: 500, md: 560 },
-        maxHeight: { md: 800 },
+        minHeight: { xs: 360, sm: 400, md: 460 },
+        maxHeight: { md: 600 },
         backgroundColor: '#F5F6EE',
-        border: '1.5px solid #E2E5D8',
+        border: '1.5px solid #F5F6EE',
         borderRadius: { xs: '24px', md: '32px' },
         display: 'flex',
         flexDirection: 'column',
@@ -52,11 +54,11 @@ export const IllustrationPanel: React.FC = () => {
             width: '100%',
             height: '100%',
             objectFit: 'contain',
-            borderRadius: '20px',
+            borderRadius: '10px',
             mixBlendMode: 'multiply',
             transition: 'transform 0.4s ease',
             '&:hover': {
-              transform: 'scale(1.02)',
+              transform: 'scale(1.025)',
             },
           }}
         />
@@ -76,12 +78,12 @@ export const IllustrationPanel: React.FC = () => {
           }}
         >
           <Avatar
-            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80"
+            src={avatar1Img}
             alt="Team member"
             sx={{
-              width: 60,
-              height: 60,
-              border: '2.5px solid #84CC16',
+              width: 80,
+              height: 80,
+              border: '1.5px solid #0c0c0cff',
               boxShadow: '0 8px 16px rgba(132, 204, 22, 0.25)',
               backgroundColor: '#FFFFFF',
             }}
@@ -103,13 +105,13 @@ export const IllustrationPanel: React.FC = () => {
           }}
         >
           <Avatar
-            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop&q=80"
+            src={avatar2Img}
             alt="Collaborator"
             sx={{
-              width: 60,
-              height: 60,
-              border: '2.5px solid #1F2937',
-              boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)',
+              width: 70,
+              height: 70,
+              border: '1.5px solid #0a0b0bff',
+              boxShadow: '0 8px 16px rgba(243, 239, 239, 0.15)',
               backgroundColor: '#FFFFFF',
             }}
           />
@@ -127,7 +129,7 @@ export const IllustrationPanel: React.FC = () => {
             p: 1.5,
             width: 140,
             boxShadow: '0 12px 28px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04)',
-            border: '1px solid rgba(229, 231, 235, 0.8)',
+            border: '1px solid #595f6aff',
             animation: 'floatCard 5s ease-in-out infinite',
             '@keyframes floatCard': {
               '0%, 100%': { transform: 'translateY(0px)' },
@@ -140,7 +142,7 @@ export const IllustrationPanel: React.FC = () => {
             <Box>
               <Typography
                 sx={{
-                  fontWeight: 700,
+                  fontWeight: 200,
                   fontSize: '0.8rem',
                   color: '#111827',
                   lineHeight: 1.2,
@@ -165,13 +167,13 @@ export const IllustrationPanel: React.FC = () => {
                 <path
                   d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                   fill="none"
-                  stroke="#E5E7EB"
+                  stroke="#000000ff"
                   strokeWidth="3.5"
                 />
                 <path
                   d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                   fill="none"
-                  stroke="#10B981"
+                  stroke="#9FD094"
                   strokeWidth="3.5"
                   strokeDasharray="84, 100"
                   strokeLinecap="round"
@@ -201,9 +203,9 @@ export const IllustrationPanel: React.FC = () => {
             sx={{
               height: 20,
               fontSize: '0.625rem',
-              fontWeight: 500,
-              borderColor: '#E5E7EB',
-              color: '#4B5563',
+              fontWeight: 300,
+              borderColor: '#666667ff',
+              color: '#070707ff',
               '& .MuiChip-label': {
                 px: 1,
               },
@@ -241,17 +243,17 @@ export const IllustrationPanel: React.FC = () => {
         {/* Bottom Caption */}
         <Typography
           sx={{
-            fontWeight: 700,
-            fontSize: { xs: '0.925rem', sm: '1.025rem' },
+            fontWeight: 400,
+            fontSize: { xs: '2.5rem', sm: '1.075rem' },
             color: '#111827',
             textAlign: 'center',
             lineHeight: 1.4,
           }}
         >
-          Make your work easier and organized
+          Make your work easier and organized with
           <br />
-          <Box component="span" sx={{ fontWeight: 800 }}>
-            with Tuga's App
+          <Box component="span" sx={{ fontWeight: 600 }}>
+            Tuga's App
           </Box>
         </Typography>
       </Box>

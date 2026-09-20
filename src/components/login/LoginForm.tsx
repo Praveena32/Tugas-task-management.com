@@ -129,26 +129,26 @@ export const LoginForm: React.FC = () => {
         <Typography
           variant="h3"
           sx={{
-            fontWeight: 800,
+            fontWeight: 600,
             fontSize: { xs: '1.85rem', sm: '2.1rem' },
             color: '#111827',
             letterSpacing: '-0.025em',
             mb: 1.25,
           }}
         >
-          Welcome back!
+          Welcome back!<br />
         </Typography>
         <Typography
           variant="body2"
           sx={{
-            color: '#6B7280',
+            color: '#666b77ff',
             lineHeight: 1.55,
-            fontSize: '0.75rem',
+            fontSize: '0.85rem',
           }}
         >
           Simplify your workflow and boost your productivity
           <br />
-          with <strong>Tuga's App</strong>. Get started for free.
+          with <strong>Tuga's App</strong>. Get started for free.<br /><br /><br />
         </Typography>
       </Box>
 
@@ -422,7 +422,7 @@ export const LoginForm: React.FC = () => {
             onClick={() => setToastMessage('Registration feature coming soon!')}
             sx={{
               color: '#9FD094',
-              fontWeight: 600,
+              fontWeight: 200,
               cursor: 'pointer',
               textDecoration: 'none',
               '&:hover': {
