@@ -84,7 +84,6 @@ export const theme = createTheme({
         root: {
           borderRadius: 9999,
           backgroundColor: '#FFFFFF',
-          transition: 'all 0.2s ease',
           fontSize: '0.9375rem',
           '& .MuiOutlinedInput-notchedOutline': {
             borderColor: '#E5E7EB',

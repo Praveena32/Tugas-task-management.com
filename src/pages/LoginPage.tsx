@@ -18,7 +18,6 @@ export const LoginPage: React.FC = () => {
         gap: { xs: 5, md: 0 },
       }}
     >
-      {/* Left Column: Login Form */}
       <Box
         sx={{
           flex: { xs: '1 1 100%', md: '1 1 50%' },
@@ -33,7 +32,6 @@ export const LoginPage: React.FC = () => {
         <LoginForm />
       </Box>
 
-      {/* Right Column: Illustration & Widgets Panel with border */}
       <Box
         sx={{
           flex: { xs: '1 1 100%', md: '1 1 50%' },

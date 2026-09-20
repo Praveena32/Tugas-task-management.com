@@ -29,10 +29,8 @@ export const IllustrationPanel: React.FC = () => {
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.02)',
       }}
     >
-      {/* Top spacer */}
       <Box sx={{ width: '100%', height: 4 }} />
 
-      {/* Main Illustration & Floating Widgets Container */}
       <Box
         sx={{
           position: 'relative',
@@ -45,11 +43,10 @@ export const IllustrationPanel: React.FC = () => {
           my: 'auto',
         }}
       >
-        {/* Central Meditation Illustration */}
         <Box
           component="img"
           src={meditationImg}
-          alt="Tuga's App Meditation and Productivity"
+          alt="Illustration"
           sx={{
             width: '100%',
             height: '100%',
@@ -63,7 +60,6 @@ export const IllustrationPanel: React.FC = () => {
           }}
         />
 
-        {/* Floating Avatar 1 (Top Left) */}
         <Box
           sx={{
             position: 'absolute',
@@ -79,18 +75,17 @@ export const IllustrationPanel: React.FC = () => {
         >
           <Avatar
             src={avatar1Img}
-            alt="Team member"
+            alt="User 1"
             sx={{
               width: 80,
               height: 80,
-              border: '1.5px solid #0c0c0cff',
-              boxShadow: '0 8px 16px rgba(240, 255, 218, 1)',
+              border: '1.5px solid #0c0c0c',
+              boxShadow: '0 8px 16px rgba(132, 204, 22, 0.25)',
               backgroundColor: '#9FD094',
             }}
           />
         </Box>
 
-        {/* Floating Avatar 2 (Bottom Right) */}
         <Box
           sx={{
             position: 'absolute',
@@ -106,18 +101,17 @@ export const IllustrationPanel: React.FC = () => {
         >
           <Avatar
             src={avatar2Img}
-            alt="Collaborator"
+            alt="User 2"
             sx={{
               width: 70,
               height: 70,
-              border: '1.5px solid #0a0b0bff',
+              border: '1.5px solid #0a0b0b',
               boxShadow: '0 8px 16px rgba(243, 239, 239, 0.15)',
               backgroundColor: '#FFFFFF',
             }}
           />
         </Box>
 
-        {/* Floating "Canva Design" Task Badge (Bottom Left) */}
         <Box
           sx={{
             position: 'absolute',
@@ -128,9 +122,8 @@ export const IllustrationPanel: React.FC = () => {
             borderRadius: '16px',
             p: 1.5,
             width: 180,
-
-            boxShadow: '0 12px 28px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04)',
-            border: '1px solid #595f6aff',
+            boxShadow: '0 12px 28px -4px rgba(0, 0, 0, 0.08)',
+            border: '1px solid #595f6a',
             animation: 'floatCard 5s ease-in-out infinite',
             '@keyframes floatCard': {
               '0%, 100%': { transform: 'translateY(0px)' },
@@ -142,7 +135,6 @@ export const IllustrationPanel: React.FC = () => {
             gap: 1.25,
           }}
         >
-          {/* Left Column: Canva Design (Single Line), 10 Task, Design Tag */}
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.35, minWidth: 0 }}>
             <Typography
               sx={{
@@ -157,7 +149,7 @@ export const IllustrationPanel: React.FC = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: '0.5rem',
+                fontSize: '0.675rem',
                 color: '#9CA3AF',
                 lineHeight: 1.2,
                 whiteSpace: 'nowrap',
@@ -173,8 +165,8 @@ export const IllustrationPanel: React.FC = () => {
                 height: 19,
                 fontSize: '0.625rem',
                 fontWeight: 300,
-                borderColor: '#666667ff',
-                color: '#070707ff',
+                borderColor: '#666667',
+                color: '#070707',
                 width: 'fit-content',
                 mt: 0.25,
                 '& .MuiChip-label': {
@@ -184,7 +176,6 @@ export const IllustrationPanel: React.FC = () => {
             />
           </Box>
 
-          {/* Right Column: Circular Progress Gauge Centered Vertically */}
           <Box
             sx={{
               position: 'relative',
@@ -202,7 +193,7 @@ export const IllustrationPanel: React.FC = () => {
                 cy="18"
                 r="15.9155"
                 fill="none"
-                stroke="#000000ff"
+                stroke="#000000"
                 strokeWidth="3.2"
               />
               <circle
@@ -236,9 +227,7 @@ export const IllustrationPanel: React.FC = () => {
         </Box>
       </Box>
 
-      {/* Bottom Section: Carousel Dots & Subtitle */}
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 1.5 }}>
-        {/* Pagination Dots */}
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75, mb: 1.75 }}>
           {[0, 1, 2].map((index) => {
             const isActive = activeSlide === index;
@@ -262,11 +251,10 @@ export const IllustrationPanel: React.FC = () => {
           })}
         </Box>
 
-        {/* Bottom Caption */}
         <Typography
           sx={{
             fontWeight: 400,
-            fontSize: { xs: '2.5rem', sm: '1.075rem' },
+            fontSize: { xs: '0.95rem', sm: '1.05rem' },
             color: '#111827',
             textAlign: 'center',
             lineHeight: 1.4,
