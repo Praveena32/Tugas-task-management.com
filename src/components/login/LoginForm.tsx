@@ -124,7 +124,7 @@ export const LoginForm: React.FC = () => {
         position: 'relative',
       }}
     >
-      {/* Discreet Config Status indicator */}
+      {/* Discreet Config Status indicator 
       <Box sx={{ position: 'absolute', top: -30, right: 0 }}>
         <Tooltip
           title={
@@ -148,10 +148,10 @@ export const LoginForm: React.FC = () => {
             <span>{isConfigured ? 'Firebase Active' : 'Preview Mode'}</span>
           </Box>
         </Tooltip>
-      </Box>
+      </Box>*/}
 
       {/* Header */}
-      <Box sx={{ mb: 4, textAlign: 'left' }}>
+      <Box sx={{ mb: 2, textAlign: 'center' }}>
         <Typography
           variant="h3"
           sx={{
@@ -169,7 +169,7 @@ export const LoginForm: React.FC = () => {
           sx={{
             color: '#6B7280',
             lineHeight: 1.55,
-            fontSize: '0.875rem',
+            fontSize: '0.75rem',
           }}
         >
           Simplify your workflow and boost your productivity
@@ -278,7 +278,7 @@ export const LoginForm: React.FC = () => {
               cursor: 'pointer',
               fontSize: '0.8125rem',
               fontWeight: 500,
-              color: '#6B7280',
+              color: '#1b1c1dff',
               textDecoration: 'none',
               transition: 'color 0.2s',
               '&:hover': {
@@ -330,7 +330,7 @@ export const LoginForm: React.FC = () => {
           variant="body2"
           sx={{
             px: 2,
-            color: '#9CA3AF',
+            color: '#1b1c1dff',
             fontSize: '0.8125rem',
             fontWeight: 400,
             whiteSpace: 'nowrap',
@@ -438,7 +438,7 @@ export const LoginForm: React.FC = () => {
         <Typography
           variant="body2"
           sx={{
-            color: '#6B7280',
+            color: '#1b1c1dff',
             fontSize: '0.875rem',
           }}
         >
