@@ -84,8 +84,8 @@ export const IllustrationPanel: React.FC = () => {
               width: 80,
               height: 80,
               border: '1.5px solid #0c0c0cff',
-              boxShadow: '0 8px 16px rgba(132, 204, 22, 0.25)',
-              backgroundColor: '#FFFFFF',
+              boxShadow: '0 8px 16px rgba(240, 255, 218, 1)',
+              backgroundColor: '#9FD094',
             }}
           />
         </Box>
