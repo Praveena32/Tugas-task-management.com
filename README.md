@@ -20,42 +20,17 @@ This repository contains the implementation of the login page UI and Firebase Go
 
 ## Getting Started
 
-### 1. Install Dependencies
-
 ```bash
 npm install
-```
-
-### 2. Environment Setup
-
-Create a `.env` file in the root directory based on `.env.example`:
-
-```env
-VITE_FIREBASE_API_KEY=your_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
-VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
-```
-
-### 3. Run Locally
-
-```bash
 npm run dev
 ```
 
-### 4. Build
+### Build
 
 ```bash
 npm run build
 ```
 
-## Deployment to Firebase Hosting
+## Live Deployment
 
-```bash
-npm run build
-npx firebase login
-npx firebase deploy --only hosting
-```
+- Live URL: https://tugas-task-management.web.app
