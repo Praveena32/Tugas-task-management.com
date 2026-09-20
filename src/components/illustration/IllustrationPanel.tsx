@@ -9,9 +9,12 @@ export const IllustrationPanel: React.FC = () => {
     <Box
       sx={{
         width: '100%',
-        height: '100%',
-        minHeight: { xs: 460, md: 580 },
+        maxWidth: { xs: '100%', sm: 480, md: 540, lg: 600 },
+        height: { xs: 'auto', md: 'calc(100vh - 36px)' },
+        minHeight: { xs: 460, sm: 500, md: 560 },
+        maxHeight: { md: 800 },
         backgroundColor: '#F5F6EE',
+        border: '1.5px solid #E2E5D8',
         borderRadius: { xs: '24px', md: '32px' },
         display: 'flex',
         flexDirection: 'column',
@@ -21,6 +24,7 @@ export const IllustrationPanel: React.FC = () => {
         position: 'relative',
         overflow: 'hidden',
         userSelect: 'none',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.02)',
       }}
     >
       {/* Top spacer */}
@@ -75,8 +79,8 @@ export const IllustrationPanel: React.FC = () => {
             src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80"
             alt="Team member"
             sx={{
-              width: 44,
-              height: 44,
+              width: 60,
+              height: 60,
               border: '2.5px solid #84CC16',
               boxShadow: '0 8px 16px rgba(132, 204, 22, 0.25)',
               backgroundColor: '#FFFFFF',
@@ -102,8 +106,8 @@ export const IllustrationPanel: React.FC = () => {
             src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop&q=80"
             alt="Collaborator"
             sx={{
-              width: 42,
-              height: 42,
+              width: 60,
+              height: 60,
               border: '2.5px solid #1F2937',
               boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)',
               backgroundColor: '#FFFFFF',
